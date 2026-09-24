@@ -28,10 +28,11 @@ on every release, with checksums from that release's `checksums.txt` — do not
 edit it by hand.
 
 **Installed before v1.0.1?** Earlier versions were a formula, which has been
-removed. Switch once:
+removed. Switch once. `--formula` is required: without it, Homebrew resolves
+the name to the new cask, which is not yet trusted, and refuses to load it.
 
 ```bash
-brew uninstall clavik && brew install --cask clavik-io/tap/clavik
+brew uninstall --formula clavik && brew install --cask clavik-io/tap/clavik
 ```
 
 Supported: macOS (Apple silicon and Intel) and Linux (x86-64 and arm64).
